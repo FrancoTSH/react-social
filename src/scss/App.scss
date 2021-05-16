@@ -1,0 +1,21 @@
+// 1 - BASE
+@import "1-base/variables";
+@import "1-base/mixins";
+@import "1-base/normalize";
+@import "1-base/reset";
+@import "1-base/global";
+
+// 2 - LAYOUT
+@import "2-layout/footer";
+@import "2-layout/navigation";
+@import "2-layout/forms";
+
+// 3 - COMPONENTS
+@import "3-components/buttons";
+@import "3-components/posts";
+@import "3-components/comments";
+
+// 4 - PAGES
+@import "4-pages/home";
+@import "4-pages/profile";
+@import "4-pages/404";

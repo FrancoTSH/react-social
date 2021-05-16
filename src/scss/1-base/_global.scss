@@ -1,0 +1,94 @@
+section {
+  overflow: hidden;
+  width: 100%;
+
+  &:not(:first-child) {
+    padding: 10rem 0;
+
+    @include tablet {
+      padding: 5rem 0;
+    }
+  }
+}
+
+p {
+  line-height: 1.9rem;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 975px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include laptop {
+    max-width: 880px;
+  }
+}
+
+.section-title {
+  color: $secondary;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+  margin-bottom: 5.5rem;
+  text-align: center;
+  position: relative;
+
+  &.title-secondary {
+    text-transform: none;
+    text-align: left;
+    margin-bottom: 3rem;
+
+    &::after {
+      left: 0;
+
+      @include tablet {
+        left: calc(50% - 30px);
+      }
+    }
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 65px;
+    background: $primary;
+    left: calc(50% - 30px);
+  }
+
+  @include laptop {
+    font-size: 3rem;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    flex: 1;
+    position: relative;
+  }
+
+  @include laptop {
+    flex-direction: column;
+  }
+}
+
+main {
+  background: #fafafa;
+}

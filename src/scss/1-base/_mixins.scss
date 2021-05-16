@@ -1,0 +1,29 @@
+@mixin mobile {
+    @media screen and (max-width: 546px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (max-width: 1366px){
+        @content;
+    }
+}
+
+@mixin device-landscape{
+    @media screen and (max-width: 1024px) and (orientation:landscape){
+        @content;
+    }
+}

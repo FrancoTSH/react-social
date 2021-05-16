@@ -1,0 +1,23 @@
+.not-found {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 8rem;
+
+  &__content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 500px;
+    line-height: 1.5;
+  }
+
+  &__title {
+    padding: 20px 0;
+    line-height: 1.2;
+  }
+
+  &__description a {
+    color: $blue;
+  }
+}

@@ -1,0 +1,55 @@
+footer {
+    background: $white;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .social {
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+
+            a {
+                border-radius: 50%;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 45px;
+                height: 45px;
+                margin: 0 5px;
+                color: #9ba0a3;
+                line-height: 45px;
+                background: rgba(155,160,163,0.12);
+                transition: background .2s ease-in-out,color .2s ease-in-out;
+            
+                .social-icon {
+                    display: block;
+                }
+
+                &:hover {
+                    color: #9ba0a3;
+                    background: rgba(155,160,163,0.25);
+                }
+            }
+        }
+
+        .copy {
+            font-size: 1.2rem;
+            color: $gray;
+
+            @include laptop {
+                padding: 1.5rem;
+            }
+        }
+
+        @include laptop {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+
+    

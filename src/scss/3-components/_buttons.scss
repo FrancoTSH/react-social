@@ -1,0 +1,140 @@
+.btn {
+  display: inline-block;
+  background-color: $blue;
+  padding: 1.5rem 3rem;
+  color: $white;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+
+  &:hover {
+    background: #7e8aff;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.loading {
+    color: transparent;
+
+    &::after {
+      content: "";
+      animation: spin 0.5s linear infinite;
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border: 3px solid #fff;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-radius: 50%;
+    }
+  }
+
+  &.success {
+    background: #8bc34a;
+    color: transparent;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      height: 22%;
+      width: 12%;
+
+      border: 4px solid #fff;
+      border-top-width: 0;
+      border-right-width: 0;
+
+      transform: translate(-50%, -75%) rotate(-45deg);
+      animation: fade-in 0.6s ease;
+    }
+  }
+}
+
+.btn-hero {
+  @include tablet {
+    width: 100%;
+    padding: 1.7rem 3rem;
+  }
+}
+
+.btn-nav {
+  padding: 0.8rem 1.4rem;
+  font-size: 1.4rem;
+
+  &.btn-sec {
+    background-color: $white;
+    color: $primary;
+  }
+}
+
+.input-group-btn {
+  border-radius: 0 2px 2px 0;
+  min-width: 162px;
+  min-height: 53px;
+  padding: 1.5rem 2rem;
+  position: relative;
+
+  &:hover {
+    background: #1633ff;
+    // border: 1px solid #1633ff;
+    color: $white;
+  }
+
+  &.loading {
+    color: transparent;
+
+    &::after {
+      content: "";
+      animation: spin 0.5s linear infinite;
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border: 3px solid #fff;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-radius: 50%;
+    }
+  }
+
+  @include tablet {
+    border-radius: 2px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

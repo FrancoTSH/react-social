@@ -1,0 +1,201 @@
+.content-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  padding-top: 3rem;
+
+  .main-content {
+    flex: 0 1 65%;
+    margin-right: 2.8rem;
+
+    .createPost {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #dbdbdb;
+      background: $white;
+      margin-bottom: 2.4rem;
+
+      &__loggedIn {
+        width: 100%;
+        padding: 0.8rem 2.5rem;
+      }
+
+      &__body {
+        &-input {
+          > textarea {
+            border: none;
+            resize: none;
+            outline: none;
+            padding: 1.5rem 0;
+            width: 100%;
+          }
+        }
+
+        &-ip {
+          margin: 1.2rem 0;
+          position: relative;
+
+          .image {
+            border-radius: 4px;
+            overflow: hidden;
+            height: 90px;
+            display: inline-block;
+          }
+
+          .button {
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            background-color: rgba(0, 0, 0, 0.77);
+            top: 4px;
+            left: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+
+            > svg {
+              fill: $white;
+              width: 1.6rem;
+            }
+          }
+        }
+      }
+
+      &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 0.8rem;
+        border-top: 1px solid #dbdbdb;
+
+        &-img {
+          > label {
+            cursor: pointer;
+          }
+          > input {
+            display: none;
+          }
+        }
+
+        .btn {
+          padding: 1rem 3rem;
+          font-size: 14px;
+          font-weight: 500;
+          position: relative;
+
+          &.loading {
+            color: transparent;
+
+            &::after {
+              content: "";
+              animation: spin 0.5s linear infinite;
+              position: absolute;
+              width: 22px;
+              height: 22px;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              border: 3px solid #fff;
+              border-top-color: transparent;
+              border-left-color: transparent;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    flex: 0 1 35%;
+    position: fixed;
+    right: 0;
+    left: 63%;
+    max-width: 325px;
+
+    &__user {
+      display: flex;
+      margin: 2rem 0;
+      font-size: 1.35rem;
+      align-items: center;
+      padding: 0 1.6rem;
+
+      &-avatar {
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        overflow: hidden;
+        margin-right: 1.8rem;
+
+        img {
+          width: 56px;
+        }
+      }
+
+      &-name {
+        font-weight: 600;
+      }
+
+      &-email {
+        color: #8e8e8e;
+      }
+
+      strong {
+        text-align: center;
+        line-height: 1.4;
+      }
+    }
+
+    &__list {
+      &-title {
+        font-size: 1.4rem;
+        color: #8e8e8e;
+        font-weight: 600;
+        padding: 0.4rem 1.6rem;
+      }
+
+      &-users {
+        padding: 0 16px;
+        margin-top: 8px;
+      }
+
+      &-user {
+        padding: 8px 0;
+
+        &-img {
+          border-radius: 50%;
+          overflow: hidden;
+          width: 32px;
+          height: 32px;
+          margin-right: 12px;
+        }
+
+        &-info {
+          display: flex;
+          font-size: 14px;
+          flex-direction: column;
+        }
+
+        &-name {
+          font-weight: 600;
+        }
+
+        &-extra {
+          font-size: 12px;
+          color: #8e8e8e;
+          margin-top: 4px;
+        }
+      }
+
+      &-a {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

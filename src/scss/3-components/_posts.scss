@@ -1,0 +1,48 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+
+  .post {
+    background-color: $white;
+    margin-bottom: 6rem;
+    border: 1px solid #dbdbdb;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 1.6rem;
+      border-bottom: 0;
+
+      &-info {
+        display: flex;
+        align-items: center;
+      }
+
+      &-avatar {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 1.3rem;
+      }
+
+      &-name a {
+        font-size: 1.35rem;
+        color: #262626;
+        font-weight: 600;
+      }
+
+      &-delete {
+        cursor: pointer;
+
+        button {
+          padding: 0.55rem 0.8rem;
+          border: 0;
+          background: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

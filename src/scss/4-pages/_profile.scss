@@ -1,0 +1,72 @@
+.profile {
+  margin-top: 3rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  display: flex;
+
+  &__sidebar {
+    flex: 0 0 246px;
+    border-right: 1px solid #dbdbdb;
+
+    &-link {
+      display: block;
+      font-size: 15px;
+      height: 100%;
+      line-height: 20px;
+      padding: 16px 16px 16px 30px;
+      color: #262626;
+      font-weight: 500;
+      border-left: 2px solid transparent;
+
+      &.active {
+        border-left-color: #262626;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__main {
+    padding: 32px 75px;
+    width: 60%;
+
+    &-header {
+      display: flex;
+      align-items: center;
+    }
+
+    &-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 32px;
+    }
+
+    &-change-photo {
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      color: $blue;
+    }
+  }
+}
+
+.secondary-form {
+  display: block;
+  padding: 2rem 0;
+
+  .file {
+    display: none;
+  }
+
+  .btn {
+    width: unset;
+    padding: 1.6rem 2.8rem;
+  }
+
+  small {
+    margin: -8px 0;
+    display: block;
+    color: #8e8e8e;
+  }
+}
