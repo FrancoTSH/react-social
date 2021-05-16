@@ -1,4 +1,7 @@
 describe('Home Page', () => {
+  const email = Cypress.env('email'),
+    password = Cypress.env('password')
+
   beforeEach(() => {
     cy.visit('/', {
       onBeforeLoad: (win) => {
@@ -13,15 +16,15 @@ describe('Home Page', () => {
 
   it('allows the user to sign in', () => {
     cy.contains('Ingresar').click();
-    cy.get('#email').type('tosheycrack12@gmail.com')
-    cy.get('#password').type('FrancoTSH')
+    cy.get('#email').type(email)
+    cy.get('#password').type(password)
     cy.get('.login-btn').click({ force: true });
     cy.get('.avatar-img').should('exist')
   })
 
   describe('when logged in', () => {
     beforeEach(() => {
-      cy.login('tosheycrack12@gmail.com', 'FrancoTSH')
+      cy.login(email, password)
     })
 
     it('add a comment to a post', () => {
