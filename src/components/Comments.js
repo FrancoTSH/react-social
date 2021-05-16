@@ -33,7 +33,7 @@ const Comments = ({ caption, likes, timestamp, userLiked, user, postId }) => {
   const handleSubmit = async ({ comment }, { resetForm }) => {
     try {
       const res = await addComment(postId, comment, currentUser.displayName)
-      setComments(prevComments => ({ ...prevComments, data: [...prevComments.data, res] }));
+      setComments(prevComments => ({ ...prevComments, data: [...prevComments.data, { commentId: res.id, username: currentUser.displayName, text: comment }] }));
       resetForm({
         comment: ''
       })
